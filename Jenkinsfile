@@ -3,26 +3,14 @@ pipeline
     agent any
     stages
     {
-        stage("Salto de linea")    
+        stage("Crear fichero de texto con contenido")    
         {
             steps
             {
                 script
                 {
-                    def contenido = "Este es un ejemplo con salto de linea \n"+
-                            " y sigue aqui abajo"
-                    println contenido
-                }
-               
-            }
-        }
-        stage("Mover fichero")    
-        {
-            steps
-            {
-                script
-                {
-                    bat 'move "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\PPL_8\\Jenkinsfile" "C:\\"' 
+                    def newFile = new File("C:\temp\Ejercicio dia 2.txt")
+                    newFile.write("Contenido de mi interprete favorito")
                 }
                
             }
