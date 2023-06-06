@@ -16,5 +16,16 @@ pipeline
                
             }
         }
+        stage("Mover fichero")    
+        {
+            steps
+            {
+                script
+                {
+                    bat 'move "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\PPL_8\\Jenkinsfile" "C:\\"' 
+                }
+               
+            }
+        }
     }
 }
