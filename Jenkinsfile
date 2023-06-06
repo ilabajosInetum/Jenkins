@@ -7,12 +7,10 @@ pipeline
         {
             steps
             {
-                script
-                {
-                    def newFile = new File("C:\\temp\\Ejercicio dia 2.txt")
+                 script {
+                     def newFile = new File("C:\\temp\\Ejercicio dia 2.txt")
                     newFile.write("Contenido de mi interprete favorito")
-                }
-               
+                 }
             }
         }
     }
